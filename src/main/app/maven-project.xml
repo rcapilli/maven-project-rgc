@@ -31,6 +31,7 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
 		<db:select config-ref="Derby_Configuration" doc:name="Database">
 			<db:parameterized-query><![CDATA[Select * from FLIGHTS]]></db:parameterized-query>
 		</db:select>
+        <set-property propertyName="content-type" value="application/json" doc:name="Property"/>
 		
         <json:object-to-json-transformer doc:name="Object to JSON"/>
 	</flow>
